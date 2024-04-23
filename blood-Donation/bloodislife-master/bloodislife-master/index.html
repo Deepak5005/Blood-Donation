@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blood Donation</title>
+	
+	<link rel="shortcut icon" href="./icons/fevicon.png" type="image/png">
+	<link rel="stylesheet" href="./css/font-awesome-5.11.2.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-4.3.1.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid-4.3.1.min.css">
+	<link rel="stylesheet" href="./css/bootstrap-reboot-4.3.1.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/angular-1.7.8.min.js"></script>
+	<script src="./js/angular-route-1.7.8.min.js"></script>
+	<script src="./js/font-awesome-5.11.2.min.js"></script>
+	<script src="./js/popper-1.14.7.min.js"></script>
+	<script src="./js/bootstrap-4.3.1.min.js"></script>
+	<script src="./js/bootstrap.bundle-4.3.1.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body ng-app="bloodApp" style="background-color: rgb(224, 222, 222);">
+
+	<!-- Navigation starts here -->
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top nb">
+		<a href="#" class="navbar-brand"><img src="./icons/logo.png" style="width: 150px;"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse text-center" id="navbarCollapse">
+			<ul class="navbar-nav ml-auto">
+				<li class="navbar-item"><a href="#/!" class="nav-link text-white pop-nav">Home</a></li>
+				<li class="navbar-item"><a href="#!/whyblood" class="nav-link text-white pop-nav">Why Give Blood</a></li>
+				<li class="navbar-item"><a href="#!/banks" class="nav-link text-white pop-nav">Blood Banks</a></li>
+				<li class="navbar-item"><a href="#!/donation" class="nav-link text-white pop-nav">Donation Program</a></li>
+				<li class="navbar-item"><a href="#!/about" class="nav-link text-white pop-nav">About</a></li>
+			</ul>	
+		</div>
+	</nav>
+	<!-- Navigation ends here -->
+
+	<!-- Main Content starts here -->
+	<main id="main-content mt-5 pt-5" ng-view></main>
+	<!-- Main Content ends here -->
+
+	<!-- Footer starts here -->
+	<footer class="page-footer font-small text-light" style="background: linear-gradient(to left bottom,#ee0d0d, #111 60%); box-shadow: 0px 0px 10px 4px #000;">
+
+		<div style="background: linear-gradient(to left,#ee0d0d , #111 70%); box-shadow: 0px 0px 4px 1px #000;">
+			<div class="container">
+		
+				<!-- Grid row-->
+				<div class="row py-1 d-flex align-items-center">
+		
+				<!-- Grid column -->
+				<div class="col-md-6 col-lg-5 text-center text-md-left mb-3 mb-md-0">
+					<h6 class="mb-0">Get connected with us on social networks!</h6>
+				</div>
+				<!-- Grid column -->
+		
+				<!-- Grid column -->
+				<div class="col-md-6 col-lg-7 text-center text-md-right">
+					<!-- Facebook -->
+					<a class="fb-ic">
+					<i class="fab fa-facebook-f white-text"> </i>
+					</a>
+					<!-- Twitter -->
+					<a class="tw-ic">
+					<i class="fab fa-twitter white-text"> </i>
+					</a>
+					<!--Linkedin -->
+					<a class="li-ic">
+					<i class="fab fa-linkedin white-text"> </i>
+					</a>
+					<!--Instagram-->
+					<a class="ins-ic">
+					<i class="fab fa-instagram white-text"> </i>
+					</a>
+				</div>
+				<!-- Grid column -->
+				</div>
+				<!-- Grid row-->
+		
+			</div>
+		</div>
+		
+		<!-- Footer Links -->
+		<div class="container text-center text-md-left mt-5">
+			<!-- Grid row -->
+			<div class="row mt-1">
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-1">
+					<!-- Content -->
+					<h6 class="text-uppercase font-weight-bold">BloodDonation</h6>
+					<hr class="deep-purple accent-2 mb-3 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<p>
+						Lovely Professional University, Jalandhar - 144411
+					</p>
+					<p>
+						<i class="fas fa-envelope mr-2"></i> info@bloodislife.com
+					</p>
+					<p>
+						<i class="fas fa-phone mr-2"></i> + 91 234 567 88
+					</p>
+				</div>
+				<!-- Grid column -->
+		
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-1">
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">Products</h6>
+					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<p>
+						<a href="#!"><img src="icons/apple_store.png" class="app-store" alt="Apple Store"></a>
+					</p>
+					<p>
+						<a href="#!"><img src="icons/google_store.png" class="app-store" alt="Google Store"></a>
+					</p>
+				</div>
+				<!-- Grid column -->
+
+				<!-- Grid column -->
+				<div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-1">
+					<!-- Links -->
+					<h6 class="text-uppercase font-weight-bold">Suggestions</h6>
+					<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+					<div id="suggestionAlert"></div>
+					<form id="suggestionForm" onsubmit="suggestions()">
+						<div class="form-group">
+							<label for="suggestionFormTextarea">Your Valuable Suggestion</label>
+							<textarea class="form-control" id="suggestionText" rows="3"></textarea>
+						</div>
+						<div class="form-group form-check">
+							<input type="checkbox" class="form-check-input" id="suggestionCheck">
+							<label class="form-check-label" for="suggestionCheck">Check to Submit</label>
+						</div>
+						<button type="submit" class="btn" style="background: rgb(255, 255, 255); color: #eb0000; font-weight: bolder;">Submit</button>
+					</form>
+				</div>
+				<!-- Grid column -->
+			</div>
+			<!-- Grid row -->	
+		</div>
+		<!-- Footer Links -->
+		
+		<!-- Copyright -->
+		<div class="footer-copyright text-center py-3">&copy; <script>document.write(new Date().getFullYear());</script> Copyright | 
+			<a class="text-danger" href="#!"> BloodDonation</a>
+		</div>
+		<!-- Copyright -->
+		
+	</footer>
+	<!-- Footer ends here -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+    
+/* ================== */
+/* Custom Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 15px;
+    background: transparent;
+    opacity: 0;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    background: black;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, red, #000); 
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom,#000, red);
+}
+
+/* ============================= */
+/* ======== Slideshow ========== */
+
+.carousel-indicators li {
+    background-color: rgb(148, 18, 18);
+}
+.carousel-indicators .active {
+    background-color: darkred;
+}
+
+#bloodCarousel{
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    z-index: 8;
+}
+
+/* ============================= */
+/* ====== Circular Icons ======= */
+
+.imageIcon
+{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: white;
+}
+
+/* ========================== */
+/* == Navbar Customization == */
+
+.nb{
+    box-shadow: 0px 0px 10px 8px #000;
+    z-index: 10;
+    background-image: linear-gradient(to bottom right,#000 40%, red);	
+}
+
+.navbar-nav .active{
+    font-weight: bolder;
+    border-bottom: 2px solid white;
+}
+
+/* ============================= */
+/* Navigation Transition Effects */
+.pop-nav
+{
+	transition: .5s;
+}
+.pop-nav:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* ====================================== */
+/* ========= Cards Popup Effect ========= */
+.pop-card{
+    height: 100%;
+    transition: .3s;
+    box-shadow: 0px 0px 10px 2px #aaa;
+}
+
+.pop-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 5px #999;
+}
+
+/* =============================== */
+/* ====== Transition Effects ===== */
+.pop-trans{
+    transition: .3s;
+    box-shadow: 0px 0px 10px 2px #aaa;
+}
+
+.pop-trans:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px #999;
+}
+
+/* ============================ */
+/* ===== Read More Buttons ==== */
+[id^=moreText] {
+    display: none;
+}
+
+/* ======== Forms ============ */
+/* ========= SignUp Form =========  */
+/* Float cancel and signup buttons and add an equal width */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 500; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5dec;
+    padding-top: 40px;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: .5% auto auto auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f11c1c;
+}
+  
+.close:hover, .close:focus {
+    color: #ff0d00;
+    cursor: pointer;
+}
+
+/* ========================== */
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* =============================== */
+/* Button Theme Reddish Pink Color */
+.btn_crimson{
+    background-color: crimson;
+    color: white;
+}
+.btn_crimson:hover{
+    color: white;
+}
+
+/* =================== */
+/* Footer Social Icons */
+
+[class$=ic]{
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+}
+[class$=ic]:hover{
+    cursor: pointer;
+    text-align: center;
+    background: rgba(51, 51, 51, 0.2);
+}
+.app-store{
+    width: 200px;
+    height: 50px;
+}
+
+/* ================ */
+/* Responsive Image */
+@media screen and (max-width:768px) {
+    img {
+        width:100%;
+    }
+}
+
+/* ================ */
+/* Parallax Effect */
+.parallax-container{
+    height: 100%;
+    font-size: 1rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: lighter;
+    line-height: 1.8em;
+    color: white;
+}
+
+.pimg1{
+    background-image: url('../images/blood_1.jpg');
+    min-height: 80vh;
+}
+.pimg2{
+    background-image: url('../images/blood_2.jpeg');
+    min-height: 80vh;
+}
+.pimg3{
+    background-image: url('../images/blood_3.jpg');
+    min-height: 80vh;
+}
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section{
+    position: relative;
+    padding: 40px 80px;
+}
+.section-light{
+    background-color: white;
+    color: #111;
+}
+.section .block{
+    padding: 0 15%;
+    font-size: 14px;
+}
+.section .block h2{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+#video-blood{
+    position: absolute;
+    right: 20%;
+    width: 28%;
+    height: 35%;
+}
+@media screen and (max-width: 680px){
+    #video-blood{
+        position: relative;
+        margin: auto;
+        margin-left: 4vw;
+        width: 100%;
+        padding: 0;
+    }
+    .section .block{
+        margin: 0;
+        padding:  10px 0;
+        width: 100%;
+    }
+}
+.block ul li{
+    padding: 0;
+    margin-left: 40px;
+    line-height: 1.2rem;
+}
+
+.ptext{
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    height: auto;
+    
+    text-align: center;
+    font-size: 5vw;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    color: #fff;
+    padding: 20px;
+}
+
+.ptext .border .trans{
+    background-color: transparent;
+}
+
+@media screen and (max-width: 568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
+
+/* ======================= */
+/* ===== About Page ====== */
+.team-icons {
+    margin: 15px 0;
+}
+
+.btn-dark{
+    background-color: #000;
+}
+
+.dev-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 200px;
+}
